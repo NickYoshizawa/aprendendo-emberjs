@@ -1,0 +1,11 @@
+{{page-title "Index"}}
+
+<GeneralContainer>
+  <div class="d-flex flex-wrap gap-4 justify-content-start">
+    {{#each this.model as |product|}}
+      <Product
+        @product={{product}}
+      />
+    {{/each}}
+  </div>
+</GeneralContainer>

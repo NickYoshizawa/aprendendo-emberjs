@@ -1,0 +1,15 @@
+@import './homepage';
+@import './product';
+@import './cart';
+
+* {
+  text-decoration: none !important;
+}
+
+del {
+  text-decoration: line-through !important;
+}
+
+.color-white {
+  color: white !important;
+}

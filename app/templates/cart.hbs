@@ -1,0 +1,63 @@
+{{page-title "Cart"}}
+
+<main class="container py-5">
+  <h1 class="mb-4">Shopping Cart</h1>
+
+  {{!-- Breadcrumb Navigation --}}
+  <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb bg-light px-3 py-2 rounded">
+      <li class="breadcrumb-item">
+        <LinkTo @route="index">Home</LinkTo>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+    </ol>
+  </nav>
+
+  {{!-- Order Summary Card --}}
+  <section class="card shadow-sm p-4 mb-5 w-100 w-md-75 mx-auto">
+    <h5 class="mb-4 text-end">Order Summary</h5>
+
+    {{!-- Cart Items --}}
+    {{#each this.cart.itemList as |item|}}
+      <div class="cart-item d-flex align-items-center justify-content-between mb-3 p-2 border rounded">
+        <div class="cart-item-thumbnail d-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+          <img src={{item.image}} alt="{{item.name}}" class="img-fluid rounded" style="max-height: 100%;">
+        </div>
+        <div class="flex-grow-1">
+          <h6 class="mb-1">{{item.name}}</h6>
+          <small class="text-muted">{{currency item.price}}</small>
+        </div>
+        <input
+          type="number"
+          class="form-control ms-3"
+          style="width: 80px;"
+          value={{item.count}}
+          min="1"
+          {{on "input" (fn this.updateItemCount item)}}
+        >
+      </div>
+    {{/each}}
+
+    {{!-- Totals --}}
+    <div class="d-flex justify-content-between mt-4">
+      <span>Subtotal</span>
+      <span>{{currency this.subtotal}}</span>
+    </div>
+    <div class="d-flex justify-content-between mb-2">
+      <span>Tax</span>
+      <span>{{currency this.tax}}</span>
+    </div>
+    <hr>
+    <div class="d-flex justify-content-between fw-bold">
+      <span>Total</span>
+      <span>{{currency this.total}}</span>
+    </div>
+  </section>
+
+  {{!-- Checkout Button --}}
+  <div class="text-end">
+    <button type="button" class="btn btn-success btn-lg">
+      Check out
+    </button>
+  </div>
+</main>

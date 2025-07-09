@@ -1,0 +1,44 @@
+<div class="product-details py-4">
+
+  {{!-- Product Name and Rating --}}
+  <section class="mb-3">
+    <h3 class="mb-1">{{@name}}</h3>
+    <div class="text-warning fs-5">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-half-o"></i>
+    </div>
+  </section>
+
+  {{!-- Price Section --}}
+  <section class="mb-4">
+    <div class="{{unless @isDetails 'h4'}}">
+      <span data-test-original-price class="text-muted text-decoration-line-through small me-2">{{currency @price.original}}</span>
+      <span data-test-current-price class="text-danger fw-bold">{{currency @price.current}}</span>
+    </div>
+  </section>
+
+  {{!-- Color Selection and Add to Cart (if details page) --}}
+  {{#if @isDetails}}
+    <section class="d-flex justify-content-between align-items-end flex-wrap gap-3">
+      <div>
+        <h5 class="mb-2">Color</h5>
+        <div class="d-flex gap-2 product-colors active-{{@color}}">
+          {{#each @colors as |colorInfo|}}
+            <span data-test-color class="product-color {{concat 'color-' colorInfo.color}}"
+              {{on "click" (fn @onChangeColor colorInfo.color)}}>
+            </span>
+          {{/each}}
+        </div>
+      </div>
+
+      <button data-test-add-to-cart class="btn btn-info text-white d-flex align-items-center" type="button" {{on "click" this.addToCart}}>
+        <i class="fa fa-shopping-cart me-2"></i>
+        Add to cart
+      </button>
+    </section>
+  {{/if}}
+
+</div>
