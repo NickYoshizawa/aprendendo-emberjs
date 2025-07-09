@@ -1,56 +1,89 @@
-# ember-js
+# 🛒 Aprendendo EmberJs
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+> Um projeto simples de e-commerce desenvolvido para estudar e praticar os conceitos da tecnologia **Ember.js**.
 
-## Prerequisites
+---
 
-You will need the following things properly installed on your computer.
+## 📚 Descrição
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (with npm)
-- [Ember CLI](https://cli.emberjs.com/release/)
-- [Google Chrome](https://google.com/chrome/)
+Este projeto foi criado com o objetivo de aprender Ember.js na prática, simulando uma pequena loja virtual. Ele permite que usuários escolham itens do catálogo, selecionem variações como cor e adicionem produtos ao carrinho de compras.
 
-## Installation
+---
 
-- `git clone <repository-url>` this repository
-- `cd ember-js`
-- `npm install`
+## 🎯 Objetivo
 
-## Running / Development
+Familiarizar-se com o framework **Ember.js**, suas convenções, CLI, roteamento, componentes e estrutura de diretórios.
 
-- `npm run start`
-- Visit your app at [http://localhost:4200](http://localhost:4200).
-- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+---
 
-### Code Generators
+## ⚙️ Funcionalidades
 
-Make use of the many generators for code, try `ember help generate` for more details
+- 📦 Visualização de itens do catálogo
+- 🎨 Escolha de cor do produto
+- 🛍️ Adição de itens ao carrinho
 
-### Running Tests
+---
 
-- `npm run test`
-- `npm run test:ember -- --server`
+## 🚀 Como rodar o projeto localmente
 
-### Linting
+### Pré-requisitos
 
-- `npm run lint`
-- `npm run lint:fix`
+- Node.js `>=18`
+- npm ou yarn instalado
 
-### Building
+### Passos para rodar
 
-- `npm exec ember build` (development)
-- `npm run build` (production)
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/aprendendo-emberjs.git
+   cd aprendendo-emberjs
+   ```
 
-### Deploying
+2. **Instale as dependências**
+   ```bash
+   npm install
+   ```
 
-Specify what it takes to deploy your app.
+3. **Inicie o servidor de desenvolvimento**
+   ```bash
+   npm start
+   ```
+   Ou diretamente com o Ember CLI:
+   ```bash
+   ember serve
+   ```
 
-## Further Reading / Useful Links
+4. Acesse: `http://localhost:4200`
 
-- [ember.js](https://emberjs.com/)
-- [ember-cli](https://cli.emberjs.com/release/)
-- Development Browser Extensions
-  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+---
+
+## 🧪 Scripts disponíveis
+
+| Comando         | Descrição                                 |
+|-----------------|---------------------------------------------|
+| `npm start`     | Inicia o servidor de desenvolvimento        |
+| `npm run build` | Gera uma versão de produção                 |
+| `npm test`      | Executa testes + linter                     |
+| `npm run lint`  | Executa lint em JS, CSS e Handlebars        |
+
+---
+
+## 🛠️ Principais Tecnologias
+
+- [Ember.js](https://emberjs.com/) ~6.5.0 (edição Octane)
+- [Ember CLI](https://cli.emberjs.com/)
+- [Ember Data](https://github.com/emberjs/data) ~5.5.0
+- [SASS](https://sass-lang.com/)
+- ESLint, Prettier, Stylelint
+
+---
+
+## 📄 Licença
+
+MIT © [Seu Nome ou Organização]
+
+---
+
+## 💡 Observações
+
+Este projeto é voltado para fins educacionais e está em desenvolvimento contínuo à medida que novos conceitos são aprendidos.
