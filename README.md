@@ -76,14 +76,3 @@ Familiarizar-se com o framework **Ember.js**, suas convenções, CLI, roteamento
 - [SASS](https://sass-lang.com/)
 - ESLint, Prettier, Stylelint
 
----
-
-## 📄 Licença
-
-MIT © [Seu Nome ou Organização]
-
----
-
-## 💡 Observações
-
-Este projeto é voltado para fins educacionais e está em desenvolvimento contínuo à medida que novos conceitos são aprendidos.
