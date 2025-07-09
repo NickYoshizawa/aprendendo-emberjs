@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'ember-js',
+    modulePrefix: 'aprendendo-emberjs',
     environment,
     rootURL: '/',
     locationType: 'history',
